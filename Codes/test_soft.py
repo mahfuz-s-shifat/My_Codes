@@ -1,7 +1,7 @@
 x = int(input("Enter your roll number: "))
 
 r1, r2, r3, r4, r5 = 101, 102, 103, 104, 105
-n1, n2, n3, n4, n5 = "Fahim" , "Noyon" , "Anik" , "Alif" , "Abir"
+n1, n2, n3, n4, n5 = "Fahim" , "Noyon" , "Anik" , "Alif" , "ASH"
 re1, re2, re3, re4, re5 = "CGPA 3.16", "CGPA 3.57", "CGPA 3.85", "CGPA 3.92", "CGPA 3.98"
 
 
@@ -19,6 +19,6 @@ elif x == r4:
     print("Your result : ", re4)
 elif x == r5:
     print("Your name : ", n5)
-    print("Your result : ", re5)
+    print("Your result : ", "Fail")
 else:
     print("Roll number not found.")
