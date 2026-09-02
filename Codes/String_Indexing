@@ -1,0 +1,8 @@
+a = "Hello World!"
+
+print(a)
+print(type(a))  # Data Type of the variable
+print(a[0])     # String Indexing
+print(len(a))   # Length of the string
+print(len(a)-1)      # Last index of the string
+print(a[len(a)-1])   # Last character of the string 
