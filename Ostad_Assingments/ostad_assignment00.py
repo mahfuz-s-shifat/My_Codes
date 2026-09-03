@@ -44,13 +44,12 @@ price3 = float(input("Enter Price: "))
 subtotal = price1 + price2 + price3
 
 if subtotal >= 5000:
-    discount = subtotal * 0.20   # 20% discount
-elif subtotal >= 3000:
-    discount = subtotal * 0.10   # 10% discount
+    discount = subtotal * 0.20
+    discount = subtotal * 0.10
 elif subtotal >= 1000:
-    discount = subtotal * 0.05   # 5% discount
+    discount = subtotal * 0.05
 else:
-    discount = 0                 # No discount
+    discount = 0
 
 final_total = subtotal - discount
 
