@@ -31,3 +31,42 @@ dic = {
 }
 
 print(dic) # Output: {'a': [6, 7, 8, 9, 10]}
+
+
+
+
+empty_dic = {} # Creating an empty dictionary
+
+empty_dic["name"] = "Alif" # Adding a key-value pair to the empty dictionary
+empty_dic["age"] = 20
+empty_dic["major"] = "Computer Science"
+empty_dic["gpa"] = 3.8
+print(empty_dic)
+
+empty_dic.update({
+    "country": "Bangladesh",  # Adding multiple key-value pairs to the dictionary using the update() method
+    "city": "Dhaka",
+    "grade": "A+"
+})
+
+print(empty_dic)
+
+print(student.keys()) # Output: dict_keys(['name', 'age', 'major', 'gpa'])
+
+print(student.items()) # Output: dict_items([('name', 'Alif'), ('age', 20), ('major', 'Computer Science'), ('gpa', 3.8)])
+
+for key, value in student.items(): # Iterating through the dictionary using a for loop
+    print(key, ":", value)
+
+del empty_dic["country"] # Deleting a key-value pair from the dictionary using the del statement
+empty_dic.pop("gpa") # Deleting a key-value pair from the dictionary using the pop() method
+empty_dic.pop("cities", None) # Deleting a key-value pair from the dictionary using the pop() method with a default value to avoid KeyError
+
+print(empty_dic)
+
+
+
+
+
+
+
