@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.setAttribute('aria-expanded', 'true');
     navLinks.classList.add('open');
     navBackdrop.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   }
 
   function closeMenu() {
@@ -37,10 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Close menu on backdrop click
   if (navBackdrop) {
     navBackdrop.addEventListener('click', closeMenu);
   }
 
+  // Close menu when pressing Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navLinks.classList.contains('open')) {
       closeMenu();
@@ -48,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Close menu when clicking any nav link
   const navItems = document.querySelectorAll('.nav-links a');
   navItems.forEach((link) => {
     link.addEventListener('click', () => {
@@ -102,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showToast(message) {
     if (!toast) return;
+    
     if (message) {
       const toastSpan = toast.querySelector('span');
       if (toastSpan) toastSpan.textContent = message;
@@ -111,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.setAttribute('aria-hidden', 'false');
 
     if (toastTimer) clearTimeout(toastTimer);
+
     toastTimer = setTimeout(() => {
       toast.classList.remove('show');
       toast.setAttribute('aria-hidden', 'true');
@@ -125,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(email);
         } else {
+          // Fallback for older browsers
           const textArea = document.createElement('textarea');
           textArea.value = email;
           textArea.style.position = 'fixed';
@@ -136,11 +142,13 @@ document.addEventListener('DOMContentLoaded', () => {
           document.body.removeChild(textArea);
         }
 
+        // Visual button feedback
         const copyText = copyEmailBtn.querySelector('.copy-text');
         const originalText = copyText ? copyText.textContent : 'Copy Email';
         
         copyEmailBtn.classList.add('copied');
         if (copyText) copyText.textContent = 'Copied!';
+        
         showToast('Email copied to clipboard!');
 
         setTimeout(() => {
