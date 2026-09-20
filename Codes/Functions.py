@@ -19,6 +19,8 @@
 # result = division(20,5)
 
 
+'''
+
 def result_check(marks):
     if marks >= 40 :
         return "Passed !"
@@ -28,6 +30,22 @@ def result_check(marks):
 marks = int(input("Enter Your Marks : "))
 result = result_check(marks)
 print(result)
+
+
+
+def introduce(name,age):
+    print("Name :", name, "Age : ", age)
+
+
+n = input("Enter Your Name : ")
+a = int(input("Enter Your Age : "))
+
+introduce(name= n, age = a)     # Keyword Arguments
+
+'''
+
+
+
 
 
 
