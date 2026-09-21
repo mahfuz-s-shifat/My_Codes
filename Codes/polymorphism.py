@@ -3,7 +3,7 @@ class BankAccount:
         print("Money WIthdrawn!")
 
 class SavingsAccount(BankAccount) :
-    def withdraw(self):#.Method.Overriding
+    def withdraw(self):     # Method Overriding
         print("Money withdrawn from Savings Account!")
 
 sa = SavingsAccount()
