@@ -11,7 +11,6 @@ data = {
 print(data)
 print(type(data))
 
-res = json. dumps (data)
+res = json.dumps(data)
 print(res)
 print(type(res))
-
