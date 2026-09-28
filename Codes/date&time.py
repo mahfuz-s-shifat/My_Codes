@@ -23,3 +23,11 @@ print(a)
 #Time Delta
 
 
+from datetime import datetime
+
+ekhon = datetime.now()
+
+print(ekhon.strftime("%B %d,%Y")) # September 28, 2026
+
+
+
