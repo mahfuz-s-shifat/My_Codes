@@ -1,0 +1,3 @@
+ERD Link -
+
+https://drawsql.app/teams/mahfuz-s-shifat/diagrams/multi-vendor-saas-application#
